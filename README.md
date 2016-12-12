@@ -1,7 +1,7 @@
 # CodePath-iOS-PreWork-TipCalculator
 # Pre-work - *Tippy Tip*
 
-**Name of your app** is a tip calculator application for iOS.
+**Tippy Tip** is a tip calculator application for iOS.
 
 Submitted by: **Wai Loon Chong**
 
