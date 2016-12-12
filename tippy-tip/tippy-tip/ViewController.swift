@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let defaults = UserDefaults.standard
+    
     @IBOutlet weak var tip_label: UILabel!
     @IBOutlet weak var total_label: UILabel!
     @IBOutlet weak var bill_input: UITextField!
@@ -19,8 +21,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        if (defaults.object(forKey: "defaultTip") == nil) {
+            defaults.set(1, forKey: "defaultTip")
+            defaults.synchronize()
+        }
+        tip_select.selectedSegmentIndex = defaults.integer(forKey: "defaultTip")
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        tip_select.selectedSegmentIndex = defaults.integer(forKey: "defaultTip")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

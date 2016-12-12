@@ -10,10 +10,15 @@ import UIKit
 
 class SettingViewController: UIViewController {
 
+    let defaults = UserDefaults.standard
+    
+    @IBOutlet weak var default_tip: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        default_tip.selectedSegmentIndex = defaults.integer(forKey: "defaultTip")
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,7 +27,8 @@ class SettingViewController: UIViewController {
     }
     
     @IBAction func default_tip(_ sender: Any) {
-        
+        defaults.set(default_tip.selectedSegmentIndex, forKey: "defaultTip")
+        defaults.synchronize()
     }
 
     /*
