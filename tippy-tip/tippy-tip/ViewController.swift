@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var bill_input: UITextField!
     @IBOutlet weak var tip_select: UISegmentedControl!
     
+    let darkBlue = UIColor(red: 21 / 255.0, green: 146 / 255.0, blue: 204 / 255.0, alpha: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,8 @@ class ViewController: UIViewController {
             defaults.synchronize()
         }
         tip_select.selectedSegmentIndex = defaults.integer(forKey: "defaultTip")
+        
+        bill_input.becomeFirstResponder()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -38,7 +41,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tap_rec(_ sender: Any) {
-        view.endEditing(true)
+        view.endEditing(true)AnyObject
     }
     
     @IBAction func calculate_tip(_ sender: AnyObject) {
@@ -48,8 +51,10 @@ class ViewController: UIViewController {
         let tip = bill * tip_percentage[tip_select.selectedSegmentIndex]
         let total = bill + tip
         
+        
         tip_label.text = String (format: "$%0.2f", tip)
         total_label.text = String (format: "$%0.2f", total)
+        
     }
 
 }
