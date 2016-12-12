@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         
         bill_input.becomeFirstResponder()
         
-        total_label.alpha = 0
+        total_box.alpha = 0
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -53,16 +53,16 @@ class ViewController: UIViewController {
         if bill_input.text == "" {
             UIView.animate(withDuration: 0.4,
                                        animations: {
-                                        self.total_label.alpha = 0
-                                        self.bill_input.center.y = 243
-                                        self.total_label.center.y = 360
+                                        self.total_box.alpha = 0
+                                        self.bill_box.center.y = 243
+                                        self.total_box.center.y = 360
             }
             )
         } else {
             UIView.animate(withDuration: 0.4, animations: {
-                self.total_label.alpha = 1
-                self.bill_input.center.y = 85
-                self.total_label.center.y = 215
+                self.total_box.alpha = 1
+                self.bill_box.center.y = 150
+                self.total_box.center.y = 300
             })
         }
         
