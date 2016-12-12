@@ -35,9 +35,14 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 Describe any challenges encountered while building the app.
 
+The chanllenge that I faced was when I try to link the value change of segment label to the
+calculate_tip function so the value will change according to the changes in the selection of the segment label.
+I figured out i have to change the sender in the funtion from Any to AnyObject, after that it allow me to link the value change
+to the function.
+
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2016] [Derrick Chong
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
