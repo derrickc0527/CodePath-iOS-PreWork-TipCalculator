@@ -41,7 +41,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tap_rec(_ sender: Any) {
-        view.endEditing(true)AnyObject
+        view.endEditing(true)
     }
     
     @IBAction func calculate_tip(_ sender: AnyObject) {
