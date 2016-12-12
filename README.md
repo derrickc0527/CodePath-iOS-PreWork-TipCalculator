@@ -1,9 +1,9 @@
 # CodePath-iOS-PreWork-TipCalculator
-# Pre-work - *Name of App Here*
+# Pre-work - *Tippy Tip*
 
 **Name of your app** is a tip calculator application for iOS.
 
-Submitted by: **Tippy Tip**
+Submitted by: **Wai Loon Chong**
 
 Time spent: **5** hours spent in total
 
@@ -42,7 +42,7 @@ to the function.
 
 ## License
 
-    Copyright [2016] [Derrick Chong
+    Copyright [2016] [Wai Loon Chong]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
