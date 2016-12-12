@@ -17,7 +17,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var bill_input: UITextField!
     @IBOutlet weak var tip_select: UISegmentedControl!
     
-    let darkBlue = UIColor(red: 21 / 255.0, green: 146 / 255.0, blue: 204 / 255.0, alpha: 1)
+    @IBOutlet weak var total_box: UIView!
+    @IBOutlet weak var bill_box: UIView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,8 @@ class ViewController: UIViewController {
         tip_select.selectedSegmentIndex = defaults.integer(forKey: "defaultTip")
         
         bill_input.becomeFirstResponder()
+        
+        total_label.alpha = 0
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -45,6 +49,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calculate_tip(_ sender: AnyObject) {
+        
+        if bill_input.text == "" {
+            UIView.animate(withDuration: 0.4,
+                                       animations: {
+                                        self.total_label.alpha = 0
+                                        self.bill_input.center.y = 243
+                                        self.total_label.center.y = 360
+            }
+            )
+        } else {
+            UIView.animate(withDuration: 0.4, animations: {
+                self.total_label.alpha = 1
+                self.bill_input.center.y = 85
+                self.total_label.center.y = 215
+            })
+        }
         
         let tip_percentage = [0.15, 0.18, 0.2]
         let bill = Double(bill_input.text!) ?? 0
