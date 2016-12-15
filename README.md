@@ -5,7 +5,7 @@
 
 Submitted by: **Wai Loon Chong**
 
-Time spent: **5** hours spent in total
+Time spent: **6.5** hours spent in total
 
 ## User Stories
 
